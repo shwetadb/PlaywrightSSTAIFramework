@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="1" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="com.qa.sstaiframework.tests.SubAgent_CreateTest">
+        <methods>
+          <include name="testCreateAgent"/>
+          <include name="tearDown"/>
+          <include name="setUpAgentTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.sstaiframework.tests.SubAgent_CreateTest -->
+      <class name="com.qa.sstaiframework.tests.Modules_NavigationTest">
+        <methods>
+          <include name="trainAgentsScreenNavigationTest"/>
+          <include name="agentScreenNavigationTest"/>
+          <include name="costingScreenNavigationTest"/>
+          <include name="chatScreenNavigationTest"/>
+          <include name="logoutTest"/>
+          <include name="tearDown"/>
+          <include name="policyScreenNavigationTest"/>
+          <include name="containerServicesScreenNavigationTest"/>
+          <include name="modelsScreenNavigationTest"/>
+          <include name="setUpModulesNavigation"/>
+          <include name="setUp"/>
+          <include name="createNewProjectTest"/>
+        </methods>
+      </class> <!-- com.qa.sstaiframework.tests.Modules_NavigationTest -->
+      <class name="com.qa.sstaiframework.tests.SubAgent_ValidationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="checkProfileValidationTest"/>
+          <include name="setUpAgentTest"/>
+          <include name="checkConfigValidationTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.sstaiframework.tests.SubAgent_ValidationTest -->
+      <class name="com.qa.sstaiframework.tests.Agent_ValidationTest">
+        <methods>
+          <include name="setUpAgentValidation"/>
+          <include name="checkProfileValidationTest"/>
+          <include name="tearDown"/>
+          <include name="checkConfigValidationTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.sstaiframework.tests.Agent_ValidationTest -->
+      <class name="com.qa.sstaiframework.tests.Agent_CreateTest">
+        <methods>
+          <include name="setUpAgentCreation"/>
+          <include name="tearDown"/>
+          <include name="testCreateAgent"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.sstaiframework.tests.Agent_CreateTest -->
+      <class name="com.qa.sstaiframework.tests.Agent_CheckAgentsTest">
+        <methods>
+          <include name="setUpAgentTest"/>
+          <include name="tearDown"/>
+          <include name="testCheckCreatedAgent"/>
+          <include name="navigateToSubAgentScreenTest"/>
+          <include name="testSelectCreatedAgent"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.sstaiframework.tests.Agent_CheckAgentsTest -->
+      <class name="com.qa.sstaiframework.tests.Login_ProcessTest">
+        <methods>
+          <include name="appLoginSetup"/>
+          <include name="getLoginPageTitleTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="getchatHeadingTest"/>
+        </methods>
+      </class> <!-- com.qa.sstaiframework.tests.Login_ProcessTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

@@ -1,0 +1,73 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >
+<suite name="Grouped Test Suite" parallel="tests" thread-count="3">
+    <test name="Chrome Navigation Tests">
+        <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <include name="navigation"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.qa.sstaiframework.tests.Modules_NavigationTest"/>
+        </classes>
+    </test>
+    <test name="Chrome Validation Tests">
+        <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <include name="validation"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.qa.sstaiframework.tests.Agent_ValidationTest"/>
+            <class name="com.qa.sstaiframework.tests.SubAgent_ValidationTest"/>
+        </classes>
+    </test>
+    <test name="Firefox Navigation Tests">
+        <parameter name="browser" value="firefox"/>
+        <groups>
+            <run>
+                <include name="navigation"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.qa.sstaiframework.tests.Modules_NavigationTest"/>
+        </classes>
+    </test>
+    <test name="Firefox Validation Tests">
+        <parameter name="browser" value="firefox"/>
+        <groups>
+            <run>
+                <include name="validation"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.qa.sstaiframework.tests.Agent_ValidationTest"/>
+            <class name="com.qa.sstaiframework.tests.SubAgent_ValidationTest"/>
+        </classes>
+    </test>
+    <test name="Safari Navigation Tests">
+        <parameter name="browser" value="safari"/>
+        <groups>
+            <run>
+                <include name="navigation"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.qa.sstaiframework.tests.Modules_NavigationTest"/>
+        </classes>
+    </test>
+    <test name="Safari Validation Tests">
+        <parameter name="browser" value="safari"/>
+        <groups>
+            <run>
+                <include name="validation"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.qa.sstaiframework.tests.Agent_ValidationTest"/>
+            <class name="com.qa.sstaiframework.tests.SubAgent_ValidationTest"/>
+        </classes>
+    </test>
+</suite>
+s

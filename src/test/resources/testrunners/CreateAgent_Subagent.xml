@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >
+<suite name="Create Test Suite">
+    <test name="Create Agent">
+        <classes>
+            <class name="com.qa.sstaiframework.tests.Agent_CreateTest"/>
+        </classes>
+    </test>
+    <test name="Create SubAgent">
+        <classes>
+            <class name="com.qa.sstaiframework.tests.SubAgent_CreateTest"/>
+        </classes>
+    </test>
+</suite>

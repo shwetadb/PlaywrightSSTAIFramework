@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="19.739" tests="27" errors="0" skipped="20" failures="7">
+  <properties>
+    <property name="java.specification.version" value="22"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Program Files\Maven\apache-maven-3.9.6\boot\plexus-classworlds-2.7.0.jar"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="maven.conf" value="C:\Program Files\Maven\apache-maven-3.9.6/conf"/>
+    <property name="suiteXmlFile" value="AllBrowsers.xml"/>
+    <property name="java.vm.specification.version" value="22"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-22\bin"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -DsuiteXmlFile=AllBrowsers.xml"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="C:\Program Files\Maven\apache-maven-3.9.6"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\kaver"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-22"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="22.0.1+8-16"/>
+    <property name="user.name" value="kaver"/>
+    <property name="stdout.encoding" value="cp437"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\kaver\AppData\Local\Temp\"/>
+    <property name="java.version" value="22.0.1"/>
+    <property name="user.dir" value="D:\eclipse-workspace\PlaywrightSSTAIFramework"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\eclipse-workspace\PlaywrightSSTAIFramework"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-22\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Users\kaver\AppData\Local\Programs\Python\Python311\python.exe;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Go\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Java\jdk-22;C:\Users\kaver\AppData\Local\Android\Sdk\platform-tools;C:\Users\kaver\AppData\Local\Android\Sdk\tools;C:\Users\kaver\AppData\Local\Android\Sdk\tools\bin;C:\Program Files\Maven\apache-maven-3.9.6\bin;C:\Users\kaver\AppData\Local\Android\Sdk\build-tools;C:\Users\kaver\AppData\Local\Android\Sdk\platforms;C:\Program Files\Java\jdk-22\bin;C:\Program Files\Git\cmd;C:\Program Files\Graphviz\bin;C:\Program Files\Tesseract-OCR;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\kaver\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\kaver\AppData\Local\Programs\Python\Python311\;C:\Users\kaver\AppData\Local\Microsoft\WindowsApps;C:\Users\kaver\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\kaver\.dotnet\tools;C:\Program Files\Java\jdk-17\bin;C:\Users\kaver\AppData\Roaming\npm;C:\Users\kaver\go\bin;c:\users\kaver\appdata\roaming\python\python311\scripts;c:\users\kaver\.local\bin;C:\Program Files\Java\jdk-19\bin;C:\Users\kaver\AppData\Local\Android\Sdk\tools\bin;C:\Users\kaver\AppData\Local\Android\Sdk\tools;C:\Users\kaver\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Java\jdk-19\bin\;C:\Program Files\Java\jdk-22\bin;C:\Users\kaver\AppData\Local\Android\Sdk\platform-tools;C:\Users\kaver\AppData\Local\Android\Sdk\tools;C:\Users\kaver\AppData\Local\Android\Sdk\tools\bin;C:\Program Files\mitmproxy\bin;C:\Users\kaver\gradle-8.7\bin;C:\Program Files\Maven\apache-maven-3.9.6\bin;C:\Program Files\Graphviz\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="cp437"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="22.0.1+8-16"/>
+    <property name="classworlds.conf" value="C:\Program Files\Maven\apache-maven-3.9.6\bin\m2.conf"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="library.jansi.path" value="C:\Program Files\Maven\apache-maven-3.9.6\lib\jansi-native"/>
+    <property name="java.class.version" value="66.0"/>
+  </properties>
+  <testcase name="setUpAgentTest" classname="com.qa.sstaiframework.tests.Agent_CheckAgentsTest" time="19.338">
+    <failure message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
+	at com.qa.sstaiframework.tests.Agent_CheckAgentsTest.setUpAgentTest(Agent_CheckAgentsTest.java:22)
+</failure>
+    <system-out><![CDATA[Browser name is : safari
+Starting setup for Check Agents Test...
+]]></system-out>
+  </testcase>
+  <testcase name="testCheckCreatedAgent" classname="com.qa.sstaiframework.tests.Agent_CheckAgentsTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="testSelectCreatedAgent" classname="com.qa.sstaiframework.tests.Agent_CheckAgentsTest" time="0">
+    <skipped message="Method com.qa.sstaiframework.tests.Agent_CheckAgentsTest.testSelectCreatedAgent() on instance com.qa.sstaiframework.tests.Agent_CheckAgentsTest@3c419631 depends on not successfully finished methods &#10;[com.qa.sstaiframework.tests.Agent_CheckAgentsTest.testCheckCreatedAgent() on instance com.qa.sstaiframework.tests.Agent_CheckAgentsTest@3c419631]"/>
+  </testcase>
+  <testcase name="navigateToSubAgentScreenTest" classname="com.qa.sstaiframework.tests.Agent_CheckAgentsTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="setUpAgentCreation" classname="com.qa.sstaiframework.tests.Agent_CreateTest" time="0.003">
+    <failure message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
+	at com.qa.sstaiframework.tests.Agent_CreateTest.setUpAgentCreation(Agent_CreateTest.java:21)
+</failure>
+    <system-out><![CDATA[Starting setup for Agent Creation Test.
+Logging in...
+]]></system-out>
+    <system-err><![CDATA[Setup failed: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
+]]></system-err>
+  </testcase>
+  <testcase name="testCreateAgent" classname="com.qa.sstaiframework.tests.Agent_CreateTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="setUpAgentValidation" classname="com.qa.sstaiframework.tests.Agent_ValidationTest" time="0.001">
+    <failure message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
+	at com.qa.sstaiframework.tests.Agent_ValidationTest.setUpAgentValidation(Agent_ValidationTest.java:23)
+</failure>
+    <system-out><![CDATA[Starting setup for Agent Validation Test.
+]]></system-out>
+  </testcase>
+  <testcase name="checkProfileValidationTest" classname="com.qa.sstaiframework.tests.Agent_ValidationTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="checkConfigValidationTest" classname="com.qa.sstaiframework.tests.Agent_ValidationTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="appLoginSetup" classname="com.qa.sstaiframework.tests.Login_ProcessTest" time="0.001">
+    <failure message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
+	at com.qa.sstaiframework.tests.Login_ProcessTest.appLoginSetup(Login_ProcessTest.java:13)
+</failure>
+  </testcase>
+  <testcase name="getLoginPageTitleTest" classname="com.qa.sstaiframework.tests.Login_ProcessTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="getchatHeadingTest" classname="com.qa.sstaiframework.tests.Login_ProcessTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="setUpModulesNavigation" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0.002">
+    <failure message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
+	at com.qa.sstaiframework.tests.Modules_NavigationTest.setUpModulesNavigation(Modules_NavigationTest.java:17)
+</failure>
+  </testcase>
+  <testcase name="createNewProjectTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="agentScreenNavigationTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="modelsScreenNavigationTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="costingScreenNavigationTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="policyScreenNavigationTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="containerServicesScreenNavigationTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="trainAgentsScreenNavigationTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="chatScreenNavigationTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="logoutTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="setUpAgentTest" classname="com.qa.sstaiframework.tests.SubAgent_CreateTest" time="0.001">
+    <failure message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
+	at com.qa.sstaiframework.tests.SubAgent_CreateTest.setUpAgentTest(SubAgent_CreateTest.java:24)
+</failure>
+    <system-out><![CDATA[Starting setup for Check Agents Test...
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateAgent" classname="com.qa.sstaiframework.tests.SubAgent_CreateTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="setUpAgentTest" classname="com.qa.sstaiframework.tests.SubAgent_ValidationTest" time="0.001">
+    <failure message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
+	at com.qa.sstaiframework.tests.SubAgent_ValidationTest.setUpAgentTest(SubAgent_ValidationTest.java:24)
+</failure>
+    <system-out><![CDATA[Starting setup for Check Agents Test...
+]]></system-out>
+  </testcase>
+  <testcase name="checkProfileValidationTest" classname="com.qa.sstaiframework.tests.SubAgent_ValidationTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="checkConfigValidationTest" classname="com.qa.sstaiframework.tests.SubAgent_ValidationTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+</testsuite>

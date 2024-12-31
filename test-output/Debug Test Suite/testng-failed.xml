@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Debug Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Modules Navigation Debug(failed)">
+    <classes>
+      <class name="com.qa.sstaiframework.tests.Modules_NavigationTest">
+        <methods>
+          <include name="agentScreenNavigationTest"/>
+          <include name="logoutTest"/>
+          <include name="tearDown"/>
+          <include name="setUpModulesNavigation"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.sstaiframework.tests.Modules_NavigationTest -->
+    </classes>
+  </test> <!-- Modules Navigation Debug(failed) -->
+  <test thread-count="5" name="SubAgent Validation Debug(failed)">
+    <classes>
+      <class name="com.qa.sstaiframework.tests.SubAgent_ValidationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="checkProfileValidationTest"/>
+          <include name="setUpAgentTest"/>
+          <include name="checkConfigValidationTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.sstaiframework.tests.SubAgent_ValidationTest -->
+    </classes>
+  </test> <!-- SubAgent Validation Debug(failed) -->
+</suite> <!-- Failed suite [Debug Test Suite] -->
