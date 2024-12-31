@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.sstaiframework.tests.Navigate_AgentTabsTest">
+      <class name="com.qa.sstaiframework.tests.Agent_EditTest">
         <methods>
-          <include name="switchBtwnSubAgentTabs"/>
+          <include name="editAgentTest"/>
           <include name="tearDown"/>
           <include name="setUpAgentTest"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.qa.sstaiframework.tests.Navigate_AgentTabsTest -->
+      </class> <!-- com.qa.sstaiframework.tests.Agent_EditTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
