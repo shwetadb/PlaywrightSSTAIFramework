@@ -1,8 +1,12 @@
 D:\eclipse-workspace\PlaywrightSSTAIFramework\src\test\java\com\qa\sstaiframework\tests\Agent_CreateTest.java
 D:\eclipse-workspace\PlaywrightSSTAIFramework\src\test\java\com\qa\sstaiframework\tests\Login_ProcessTest.java
-D:\eclipse-workspace\PlaywrightSSTAIFramework\src\test\java\com\qa\sstaiframework\tests\Modules_NavigationTest.java
+D:\eclipse-workspace\PlaywrightSSTAIFramework\src\test\java\com\qa\sstaiframework\tests\Navigate_SubAgentTabsTest.java
 D:\eclipse-workspace\PlaywrightSSTAIFramework\src\test\java\com\qa\sstaiframework\tests\SubAgent_ValidationTest.java
+D:\eclipse-workspace\PlaywrightSSTAIFramework\src\test\java\com\qa\sstaiframework\tests\Navigate_AgentTabsTest.java
 D:\eclipse-workspace\PlaywrightSSTAIFramework\src\test\java\com\qa\sstaiframework\tests\Agent_ValidationTest.java
+D:\eclipse-workspace\PlaywrightSSTAIFramework\src\test\java\com\qa\sstaiframework\tests\SubAgent_EditTest.java
+D:\eclipse-workspace\PlaywrightSSTAIFramework\src\test\java\com\qa\sstaiframework\tests\Agent_EditTest.java
 D:\eclipse-workspace\PlaywrightSSTAIFramework\src\test\java\com\qa\sstaiframework\tests\SubAgent_CreateTest.java
 D:\eclipse-workspace\PlaywrightSSTAIFramework\src\test\java\com\qa\sstaiframework\base\BaseTest.java
+D:\eclipse-workspace\PlaywrightSSTAIFramework\src\test\java\com\qa\sstaiframework\tests\Navigate_ModulesTest.java
 D:\eclipse-workspace\PlaywrightSSTAIFramework\src\test\java\com\qa\sstaiframework\tests\Agent_CheckAgentsTest.java

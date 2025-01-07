@@ -3,6 +3,9 @@ package com.qa.sstaiframework.factory;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Properties;
 
 import com.microsoft.playwright.Browser;
@@ -12,6 +15,7 @@ import com.microsoft.playwright.BrowserType.LaunchOptions;
 import com.microsoft.playwright.options.LoadState;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
+import com.microsoft.playwright.Tracing;
 
 public class PlaywrightFactory {
 
@@ -21,10 +25,9 @@ public class PlaywrightFactory {
     Page page;
 
     Properties prop;
-    
-    public Page initBrowser(Properties prop) {
 
-    	String browserName = prop.getProperty("browser").trim();
+    public Page initBrowser(Properties prop) {
+        String browserName = prop.getProperty("browser").trim();
         System.out.println("Browser name is : " + browserName);
 
         playwright = Playwright.create();
@@ -46,40 +49,28 @@ public class PlaywrightFactory {
                 throw new IllegalArgumentException("Browser not supported: " + browserName);
         }
 
-        browserContext = browser.newContext();
+        browserContext = browser.newContext(new Browser.NewContextOptions().setViewportSize(1519, 730));
         page = browserContext.newPage();
-//        page.setDefaultTimeout(60000); // Increase timeout globally
-	    page.waitForLoadState(LoadState.NETWORKIDLE);
+        page.waitForLoadState(LoadState.NETWORKIDLE);
         page.navigate(prop.getProperty("url").trim(), new Page.NavigateOptions().setTimeout(60000));
+
 
         return page;
     }
-    
-    
-    
+
     /**
-     * this method is used to initilize the properties fron sonfig file
+     * This method is used to initialize the properties from the config file.
      */
     public Properties init_prop() {
-    	
-    	try {
-			FileInputStream ip = new FileInputStream("./src/test/resources/config/config.properties");
-			prop = new Properties();
-			try {
-				prop.load(ip);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-    	return prop;
-    	
+        try {
+            FileInputStream ip = new FileInputStream("./src/test/resources/config/config.properties");
+            prop = new Properties();
+            prop.load(ip);
+        } catch (FileNotFoundException e) {
+            System.err.println("Config file not found: " + e.getMessage());
+        } catch (IOException e) {
+            System.err.println("Error reading config file: " + e.getMessage());
+        }
+        return prop;
     }
-    
 }
-
-
-

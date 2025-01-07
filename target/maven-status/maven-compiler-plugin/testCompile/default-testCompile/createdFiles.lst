@@ -1,0 +1,12 @@
+com\qa\sstaiframework\tests\Login_ProcessTest.class
+com\qa\sstaiframework\tests\Navigate_ModulesTest.class
+com\qa\sstaiframework\base\BaseTest.class
+com\qa\sstaiframework\tests\SubAgent_EditTest.class
+com\qa\sstaiframework\tests\Agent_EditTest.class
+com\qa\sstaiframework\tests\SubAgent_CreateTest.class
+com\qa\sstaiframework\tests\Agent_CreateTest.class
+com\qa\sstaiframework\tests\SubAgent_ValidationTest.class
+com\qa\sstaiframework\tests\Navigate_SubAgentTabsTest.class
+com\qa\sstaiframework\tests\Agent_ValidationTest.class
+com\qa\sstaiframework\tests\Navigate_AgentTabsTest.class
+com\qa\sstaiframework\tests\Agent_CheckAgentsTest.class

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="19.739" tests="27" errors="0" skipped="20" failures="7">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="11.265" tests="36" errors="0" skipped="25" failures="11">
   <properties>
     <property name="java.specification.version" value="22"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -11,13 +11,12 @@
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="user.timezone" value="Asia/Calcutta"/>
     <property name="maven.conf" value="C:\Program Files\Maven\apache-maven-3.9.6/conf"/>
-    <property name="suiteXmlFile" value="AllBrowsers.xml"/>
     <property name="java.vm.specification.version" value="22"/>
     <property name="os.name" value="Windows 11"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-22\bin"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -DsuiteXmlFile=AllBrowsers.xml"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
     <property name="jdk.debug" value="release"/>
     <property name="maven.home" value="C:\Program Files\Maven\apache-maven-3.9.6"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -61,11 +60,11 @@
     <property name="library.jansi.path" value="C:\Program Files\Maven\apache-maven-3.9.6\lib\jansi-native"/>
     <property name="java.class.version" value="66.0"/>
   </properties>
-  <testcase name="setUpAgentTest" classname="com.qa.sstaiframework.tests.Agent_CheckAgentsTest" time="19.338">
+  <testcase name="setUpAgentTest" classname="com.qa.sstaiframework.tests.Agent_CheckAgentsTest" time="10.779">
     <failure message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
 	at com.qa.sstaiframework.tests.Agent_CheckAgentsTest.setUpAgentTest(Agent_CheckAgentsTest.java:22)
 </failure>
-    <system-out><![CDATA[Browser name is : safari
+    <system-out><![CDATA[Browser name is : chrome
 Starting setup for Check Agents Test...
 ]]></system-out>
   </testcase>
@@ -73,12 +72,12 @@ Starting setup for Check Agents Test...
     <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
   </testcase>
   <testcase name="testSelectCreatedAgent" classname="com.qa.sstaiframework.tests.Agent_CheckAgentsTest" time="0">
-    <skipped message="Method com.qa.sstaiframework.tests.Agent_CheckAgentsTest.testSelectCreatedAgent() on instance com.qa.sstaiframework.tests.Agent_CheckAgentsTest@3c419631 depends on not successfully finished methods &#10;[com.qa.sstaiframework.tests.Agent_CheckAgentsTest.testCheckCreatedAgent() on instance com.qa.sstaiframework.tests.Agent_CheckAgentsTest@3c419631]"/>
+    <skipped message="Method com.qa.sstaiframework.tests.Agent_CheckAgentsTest.testSelectCreatedAgent() on instance com.qa.sstaiframework.tests.Agent_CheckAgentsTest@3e92efc3 depends on not successfully finished methods &#10;[com.qa.sstaiframework.tests.Agent_CheckAgentsTest.testCheckCreatedAgent() on instance com.qa.sstaiframework.tests.Agent_CheckAgentsTest@3e92efc3]"/>
   </testcase>
   <testcase name="navigateToSubAgentScreenTest" classname="com.qa.sstaiframework.tests.Agent_CheckAgentsTest" time="0">
     <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
   </testcase>
-  <testcase name="setUpAgentCreation" classname="com.qa.sstaiframework.tests.Agent_CreateTest" time="0.003">
+  <testcase name="setUpAgentCreation" classname="com.qa.sstaiframework.tests.Agent_CreateTest" time="0.004">
     <failure message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
 	at com.qa.sstaiframework.tests.Agent_CreateTest.setUpAgentCreation(Agent_CreateTest.java:21)
 </failure>
@@ -91,7 +90,17 @@ Logging in...
   <testcase name="testCreateAgent" classname="com.qa.sstaiframework.tests.Agent_CreateTest" time="0">
     <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
   </testcase>
-  <testcase name="setUpAgentValidation" classname="com.qa.sstaiframework.tests.Agent_ValidationTest" time="0.001">
+  <testcase name="setUpAgentTest" classname="com.qa.sstaiframework.tests.Agent_EditTest" time="0.002">
+    <failure message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
+	at com.qa.sstaiframework.tests.Agent_EditTest.setUpAgentTest(Agent_EditTest.java:20)
+</failure>
+    <system-out><![CDATA[Starting setup for Check Agents Test...
+]]></system-out>
+  </testcase>
+  <testcase name="editAgentTest" classname="com.qa.sstaiframework.tests.Agent_EditTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="setUpAgentValidation" classname="com.qa.sstaiframework.tests.Agent_ValidationTest" time="0.005">
     <failure message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
 	at com.qa.sstaiframework.tests.Agent_ValidationTest.setUpAgentValidation(Agent_ValidationTest.java:23)
 </failure>
@@ -104,7 +113,7 @@ Logging in...
   <testcase name="checkConfigValidationTest" classname="com.qa.sstaiframework.tests.Agent_ValidationTest" time="0">
     <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
   </testcase>
-  <testcase name="appLoginSetup" classname="com.qa.sstaiframework.tests.Login_ProcessTest" time="0.001">
+  <testcase name="appLoginSetup" classname="com.qa.sstaiframework.tests.Login_ProcessTest" time="0.006">
     <failure message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
 	at com.qa.sstaiframework.tests.Login_ProcessTest.appLoginSetup(Login_ProcessTest.java:13)
 </failure>
@@ -115,39 +124,62 @@ Logging in...
   <testcase name="getchatHeadingTest" classname="com.qa.sstaiframework.tests.Login_ProcessTest" time="0">
     <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
   </testcase>
-  <testcase name="setUpModulesNavigation" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0.002">
+  <testcase name="setUpAgentTest" classname="com.qa.sstaiframework.tests.Navigate_AgentTabsTest" time="0.004">
     <failure message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
-	at com.qa.sstaiframework.tests.Modules_NavigationTest.setUpModulesNavigation(Modules_NavigationTest.java:17)
+	at com.qa.sstaiframework.tests.Navigate_AgentTabsTest.setUpAgentTest(Navigate_AgentTabsTest.java:20)
+</failure>
+    <system-out><![CDATA[Starting setup for Check Agents Test...
+]]></system-out>
+  </testcase>
+  <testcase name="switchBtwnSubAgentTabs" classname="com.qa.sstaiframework.tests.Navigate_AgentTabsTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="setUpModulesNavigation" classname="com.qa.sstaiframework.tests.Navigate_ModulesTest" time="0.002">
+    <failure message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
+	at com.qa.sstaiframework.tests.Navigate_ModulesTest.setUpModulesNavigation(Navigate_ModulesTest.java:17)
 </failure>
   </testcase>
-  <testcase name="createNewProjectTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+  <testcase name="createNewProjectTest" classname="com.qa.sstaiframework.tests.Navigate_ModulesTest" time="0">
     <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
   </testcase>
-  <testcase name="agentScreenNavigationTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+  <testcase name="agentScreenNavigationTest" classname="com.qa.sstaiframework.tests.Navigate_ModulesTest" time="0">
     <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
   </testcase>
-  <testcase name="modelsScreenNavigationTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+  <testcase name="modelsScreenNavigationTest" classname="com.qa.sstaiframework.tests.Navigate_ModulesTest" time="0">
     <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
   </testcase>
-  <testcase name="costingScreenNavigationTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+  <testcase name="costingScreenNavigationTest" classname="com.qa.sstaiframework.tests.Navigate_ModulesTest" time="0">
     <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
   </testcase>
-  <testcase name="policyScreenNavigationTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+  <testcase name="policyScreenNavigationTest" classname="com.qa.sstaiframework.tests.Navigate_ModulesTest" time="0">
     <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
   </testcase>
-  <testcase name="containerServicesScreenNavigationTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+  <testcase name="containerServicesScreenNavigationTest" classname="com.qa.sstaiframework.tests.Navigate_ModulesTest" time="0">
     <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
   </testcase>
-  <testcase name="trainAgentsScreenNavigationTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+  <testcase name="trainAgentsScreenNavigationTest" classname="com.qa.sstaiframework.tests.Navigate_ModulesTest" time="0">
     <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
   </testcase>
-  <testcase name="chatScreenNavigationTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+  <testcase name="chatScreenNavigationTest" classname="com.qa.sstaiframework.tests.Navigate_ModulesTest" time="0">
     <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
   </testcase>
-  <testcase name="logoutTest" classname="com.qa.sstaiframework.tests.Modules_NavigationTest" time="0">
+  <testcase name="logoutTest" classname="com.qa.sstaiframework.tests.Navigate_ModulesTest" time="0">
     <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
   </testcase>
-  <testcase name="setUpAgentTest" classname="com.qa.sstaiframework.tests.SubAgent_CreateTest" time="0.001">
+  <testcase name="setUpAgentTest" classname="com.qa.sstaiframework.tests.Navigate_SubAgentTabsTest" time="0">
+    <failure message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
+	at com.qa.sstaiframework.tests.Navigate_SubAgentTabsTest.setUpAgentTest(Navigate_SubAgentTabsTest.java:20)
+</failure>
+    <system-out><![CDATA[Starting setup for Check Agents Test...
+]]></system-out>
+  </testcase>
+  <testcase name="switchBtwnTabsTest" classname="com.qa.sstaiframework.tests.Navigate_SubAgentTabsTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="NextBtnSwitchTabsTest" classname="com.qa.sstaiframework.tests.Navigate_SubAgentTabsTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="setUpAgentTest" classname="com.qa.sstaiframework.tests.SubAgent_CreateTest" time="0">
     <failure message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
 	at com.qa.sstaiframework.tests.SubAgent_CreateTest.setUpAgentTest(SubAgent_CreateTest.java:24)
 </failure>
@@ -155,6 +187,16 @@ Logging in...
 ]]></system-out>
   </testcase>
   <testcase name="testCreateAgent" classname="com.qa.sstaiframework.tests.SubAgent_CreateTest" time="0">
+    <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
+  </testcase>
+  <testcase name="setUpAgentTest" classname="com.qa.sstaiframework.tests.SubAgent_EditTest" time="0.001">
+    <failure message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.util.Properties.getProperty(String)" because "this.prop" is null
+	at com.qa.sstaiframework.tests.SubAgent_EditTest.setUpAgentTest(SubAgent_EditTest.java:20)
+</failure>
+    <system-out><![CDATA[Starting setup for Check Agents Test...
+]]></system-out>
+  </testcase>
+  <testcase name="editSAAgentTest" classname="com.qa.sstaiframework.tests.SubAgent_EditTest" time="0">
     <skipped message="Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null"/>
   </testcase>
   <testcase name="setUpAgentTest" classname="com.qa.sstaiframework.tests.SubAgent_ValidationTest" time="0.001">

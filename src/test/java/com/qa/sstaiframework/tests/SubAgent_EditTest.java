@@ -14,7 +14,7 @@ public class SubAgent_EditTest extends BaseTest {
 
     @BeforeClass
     public void setUpAgentTest() throws InterruptedException {
-        System.out.println("Starting setup for Check Agents Test...");
+        System.out.println("Starting setup for Edit Agents Test...");
 
         // Perform login
         loginProcess.doLogin(prop.getProperty("username").trim(), prop.getProperty("password").trim());
@@ -34,17 +34,8 @@ public class SubAgent_EditTest extends BaseTest {
         agentsPage.selectCreatedAgent();
         System.out.println("Selected Edited Agent");
         agentsPage.selectSA();
+        agentsPage.retryClickEditButton(3, 2000);
 
-        // Log properties to verify values
-        System.out.println("SubAgent Name: " + prop.getProperty("editSubAgentName"));
-        System.out.println("SubAgent Purpose: " + prop.getProperty("editSubAgentPurpose"));
-        System.out.println("SubAgent Managed Intents: " + prop.getProperty("editSubAgentManagedIntents"));
-        System.out.println("SubAgent Personality: " + prop.getProperty("editSubAgentPersonality"));
-        System.out.println("SubAgent Description: " + prop.getProperty("editSubAgentDescription"));
-        System.out.println("SubAgent Specialized Activities: " + prop.getProperty("editSubAgentSpecializedActivities"));
-        System.out.println("SubAgent Pre Instruction: " + prop.getProperty("editSubAgentPreInstruction"));
-        System.out.println("SubAgent Main Instruction: " + prop.getProperty("editSubAgentMainInstruction"));
-        System.out.println("SubAgent Post Instruction: " + prop.getProperty("editSubAgentPostInstruction"));
 
         // Profile
         agentsPage.editSAProfileDetails(

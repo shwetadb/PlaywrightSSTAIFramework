@@ -28,7 +28,7 @@ public class SubAgent_ValidationTest extends BaseTest {
         // Navigate to Agents module
         modulesNavigation.clickAgent();
         // Initialize Create Agent
-        agentsPage.selectCreatedAgent();
+        agentsPage.selectExistingAgent();
         // Initialize CreateSubAgent
         createSubAgent = new SubAgent_Create(page);
         System.out.println("Setup completed for Creating Sub Agent");

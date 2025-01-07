@@ -2,7 +2,7 @@
 <suite name="Test Suite">
     <test name="Application Tests">
         <classes>
-            <class name="com.qa.sstaiframework.tests.LoginProcessTest" />
+            <class name="com.qa.sstaiframework.tests.Login_ProcessTest" />
         </classes>
     </test>
 </suite>

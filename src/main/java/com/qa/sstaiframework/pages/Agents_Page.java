@@ -67,26 +67,31 @@ public class Agents_Page {
  */
     //profile tab
     private String subAgentProfileTab = "(//button[@id='controlled-tab-tab-agentProfile'])[2]";
-    private String subAgentEditProfileBtn = "(//button[contains(@type,'submit')][normalize-space()='Edit'])[4]";
-    private String subAgentSaveProfileBtn = "(//button[normalize-space()='Save'])[1]";
-    private String subAgentOKBtn = "(//button[normalize-space()='OK'])[1]";
+ // Locator updated to specifically match the "Edit" button within a unique class
+     private String subAgentOKBtn = "(//button[normalize-space()='OK'])[1]";
     private String subAgentProfileNextBtn = "(//button[contains(@type,'button')][normalize-space()='Next'])[4]";
-    private String subAgentNameField = "//input[@name='agentName'][1]";
-	private String subAgentPurposeField = "input[name=\"agentPurpose\"]";
-	private String subAgentManageIntentsField = "input[name=\"agentManagedIntents\"]";
-	private String subAgentPersonalityDropdown = "select[name=\"agentPersonality\"]";
-	private String subAgentDescriptionField = "input[name=\"agentDescription\"]";
-	private String subAgentSpecializedActivitiesField = "input[name=\"agentSpecializedActivities\"]";
+   
 	private String subAgentAgentToolsDropdown = "//div[@class=' css-1xc3v61-indicatorContainer']";
 	private String subAgentTypeReadRadioBtn = "//input[@id='read']";
 	private String subAgentTypeWriteRadioBtn = "//input[@id='write']";
 	private String subAgentTypeBothRadioBtn = "//input[@id='both1']";
 	private String defaultAgentYesRadioBtn = "//input[@id='default-yes']";
 	private String defaultAgentNoRadioBtn = "//input[@id='default-no']";
-	private String subAgentPreInstructionsField = "//textarea[@placeholder='Enter Pre-Instruction']";
-	private String subAgentMainInstructionField = "//textarea[@name='instructionsToAgent']";
-	private String subAgentPostInstructionField = "//textarea[@placeholder='Enter Post-Instruction']";
-	private String agentInstructionsField = "//textarea[@name='instructionToAgent']";
+		private String agentInstructionsField = "//textarea[@name='instructionToAgent']";
+	
+    // Locators
+    private String specificEditButton = "(//button[contains(@type,'submit')][normalize-space()='Edit'])[4]";
+    private String subAgentNameField = "input[name=\"agentName\"]";
+    private String subAgentPurposeField = "input[name=\"agentPurpose\"]";
+    private String subAgentManagedIntentsField = "input[name=\"agentManagedIntents\"]";
+    private String subAgentDescriptionField = "input[name=\"agentDescription\"]";
+    private String subAgentPersonalityDropdown = "input[name=\"agentPersonality\"]";
+    private String subAgentSpecializedActivitiesField = "input[name=\"agentSpecializedActivities\"]";
+    private String subAgentPreInstructionsField = "//div[@id='subAgentContainer']//textarea[@placeholder='Enter Pre-Instruction']";
+    private String subAgentMainInstructionField = "//div[@id='subAgentContainer']//textarea[@name='instructionsToAgent']";
+    private String subAgentPostInstructionField = "//div[@id='subAgentContainer']//textarea[@placeholder='Enter Post-Instruction']";
+    private String subAgentSaveProfileBtn = "//button[normalize-space()='Save']";
+
     //Config Tab
     private String subAgentConfigTab = "(//button[@id='controlled-tab-tab-agentDetails'])[2]";
     private String subAgentEditConfigBtn = "(//button[contains(@type,'submit')][normalize-space()='Edit'])[5]";
@@ -148,6 +153,15 @@ public class Agents_Page {
 		    public void selectCreatedAgent() throws InterruptedException {
 		    	page.selectOption(selectAgentDropdown, prop.getProperty("agentName"));
 		        System.out.println("Selected Agent : " + prop.getProperty("agentName") );
+		        page.keyboard().press("Enter");
+		        Thread.sleep(5000);
+		        
+		    }
+		    
+			// b) Select the created agent from the dropdown
+		    public void selectExistingAgent() throws InterruptedException {
+		    	page.selectOption(selectAgentDropdown, prop.getProperty("existingAgentName"));
+		        System.out.println("Selected Agent : " + prop.getProperty("existingAgentName") );
 		        page.keyboard().press("Enter");
 		        Thread.sleep(5000);
 		        
@@ -333,6 +347,9 @@ public class Agents_Page {
  * 
  */
 	
+	
+
+	
 	public void selectEditedAgent() throws InterruptedException {
 		page.selectOption(selectAgentDropdown, prop.getProperty("editAgentName"));
         System.out.println("Selected Agent : " + prop.getProperty("editAgentName") );
@@ -345,43 +362,108 @@ public class Agents_Page {
         page.click(createdSubAgent);
     		System.out.println("Clicked SA");
 	}
+	
+	
+	
+	   // Retry mechanism for clicking elements
+    public void retryClickEditButton(int maxRetries, int waitTimeMillis) {
+        Locator editButton = page.locator(specificEditButton);
+        for (int i = 0; i < maxRetries; i++) {
+            try {
+                if (!editButton.isVisible()) {
+                    System.out.println("Scrolling to Edit button...");
+                    editButton.scrollIntoViewIfNeeded();
+                }
+                editButton.click();
+                System.out.println("Edit button clicked successfully.");
+                return;
+            } catch (Exception e) {
+                System.err.println("Attempt " + (i + 1) + " failed. Retrying...");
+                try {
+                    Thread.sleep(waitTimeMillis);
+                } catch (InterruptedException ignored) {
+                }
+            }
+        }
+        throw new RuntimeException("Edit button not clickable after " + maxRetries + " attempts.");
+    }
 
-	// Edit SubAgent Profile Details
-	public void editSAProfileDetails(String editSubAgentName, String editSubAgentPurpose, String editSubAgentManagedIntents, String editSubAgentPersonality,
-            String editSubAgentDescription, String editSubAgentSpecializedActivities, String editSubAgentPreInstruction,
+    // Debugging locator issues
+    public void debugLocator(String locator) {
+        Locator elements = page.locator(locator);
+        List<String> texts = elements.allInnerTexts();
+        System.out.println("Matched Elements: " + texts.size());
+        for (int i = 0; i < texts.size(); i++) {
+            System.out.println("Element " + i + ": " + texts.get(i));
+        }
+    }
+    
+    
+    
+    //edit Profile
+
+    public void editSAProfileDetails(String editSubAgentName, String editSubAgentPurpose, String editSubAgentManagedIntents,
+            String editSubAgentPersonality, String editSubAgentDescription,
+            String editSubAgentSpecializedActivities, String editSubAgentPreInstruction,
             String editSubAgentMainInstruction, String editSubAgentPostInstruction) {
+    	try {
+            System.out.println("Clicking Edit button...");
+            page.click(profileEditBtn);
 
-		Locator agentNameField = page.locator("//input[@name='agentName'][1]");
-		
-		// Wait for the field to be visible and enabled
-		agentNameField.waitFor(new Locator.WaitForOptions().setTimeout(30000));
-		
-		if (agentNameField.isVisible() && agentNameField.isEnabled()) {
-		agentNameField.fill(editSubAgentName);
-		System.out.println("Filled SubAgent Name: " + editSubAgentName);
-		} else {
-		System.err.println("The 'agentName' field is not editable or visible");
-		return;
-		}
-		
-		// Repeat similar checks for other fields
-		page.fill("//input[@name='agentPurpose']", editSubAgentPurpose);
-		page.fill("//input[@name='agentManagedIntents']", editSubAgentManagedIntents);
-		
-		// Select dropdown value
-		Locator personalityDropdown = page.locator("//select[@name='agentPersonality']");
-		personalityDropdown.selectOption(editSubAgentPersonality);
-		
-		// Log and fill other fields
-		page.fill("//input[@name='agentDescription']", editSubAgentDescription);
-		page.fill("//input[@name='agentSpecializedActivities']", editSubAgentSpecializedActivities);
-		page.click("//input[@id='both1']"); // Click the "Both" radio button
-		
-		// Save the changes
-		page.locator("//button[normalize-space()='Save']").click();
-		System.out.println("Saved SubAgent Profile details");
-}
+            // Wait for the Sub-Agent Name field to become visible
+            page.waitForSelector(subAgentNameField, new Page.WaitForSelectorOptions().setTimeout(10000));
+            System.out.println("Input fields are visible.");
 
+            // Ensure the fields are enabled before interacting
+            if (page.locator(subAgentNameField).isEnabled()) {
+                // Fill fields with updated values
+                page.fill(subAgentNameField, editSubAgentName);
+                System.out.println("Updated Sub-Agent Name: " + editSubAgentName);
+
+                page.fill(subAgentPurposeField, editSubAgentPurpose);
+                System.out.println("Updated Sub-Agent Purpose: " + editSubAgentPurpose);
+
+                page.fill(subAgentManagedIntentsField, editSubAgentManagedIntents);
+                System.out.println("Updated Managed Intents: " + editSubAgentManagedIntents);
+
+                // Select Personality from dropdown
+                Locator personalityDropdownLocator = page.locator(subAgentPersonalityDropdown);
+                personalityDropdownLocator.selectOption(editSubAgentPersonality);
+                System.out.println("Updated Personality: " + editSubAgentPersonality);
+
+                page.fill(subAgentDescriptionField, editSubAgentDescription);
+                System.out.println("Updated Description: " + editSubAgentDescription);
+
+                page.fill(subAgentSpecializedActivitiesField, editSubAgentSpecializedActivities);
+                System.out.println("Updated Specialized Activities: " + editSubAgentSpecializedActivities);
+
+                page.fill(subAgentPreInstructionsField, editSubAgentPreInstruction);
+                System.out.println("Updated Pre-Instruction: " + editSubAgentPreInstruction);
+
+                page.fill(subAgentMainInstructionField, editSubAgentMainInstruction);
+                System.out.println("Updated Main Instruction: " + editSubAgentMainInstruction);
+
+                page.fill(subAgentPostInstructionField, editSubAgentPostInstruction);
+                System.out.println("Updated Post-Instruction: " + editSubAgentPostInstruction);
+
+                // Save changes
+                page.click(subAgentSaveProfileBtn);
+                System.out.println("Clicked Save Button.");
+
+                // Wait for the success confirmation
+                page.waitForSelector("//div[contains(text(),'Success')]", new Page.WaitForSelectorOptions().setTimeout(10000));
+                System.out.println("Sub-Agent profile details saved successfully.");
+            } else {
+                System.err.println("Input fields are not enabled for editing.");
+            }
+        } catch (Exception e) {
+            System.err.println("Error occurred while editing Sub-Agent details: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    
+    
+    
 
 
     // Edit SubAgent Config
