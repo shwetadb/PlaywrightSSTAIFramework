@@ -17,6 +17,8 @@ public class Models_Page {
     private String goToModelsBtn = "//button[normalize-space()='Go to Models']";
     private String OKBtn = "//button[normalize-space()='OK']";
     private String testBtn = "//button[normalize-space()='Test']";
+    private String yesBtn = "//button[normalize-space()='Yes']";
+    private String noBtn = "(//button[@class='swal2-cancel swal2-styled'])[1]";
 
     // Constructor
     public Models_Page(Page page, Properties prop) {
@@ -65,42 +67,47 @@ public class Models_Page {
 
 
     public Page selectExistingModel() throws Exception {
-//        try {
-//            String modelName = prop.getProperty("modelName");
-//            if (modelName == null || modelName.isEmpty()) {
-//                throw new IllegalArgumentException("Model name not provided in properties.");
-//            }
-//
-//            String rowLocator = "//div[contains(@class, 'rdt_TableBody')]//div[@role='row' and .//div[@data-column-id='1' and text()='" + modelName + "']]";
-//
-//            System.out.println("Waiting for table to load...");
-//            page.waitForSelector("//div[contains(@class, 'rdt_TableBody')]", 
-//                new Page.WaitForSelectorOptions().setState(WaitForSelectorState.VISIBLE).setTimeout(60000));
-//            System.out.println("Table loaded.");
-//
-//            Locator modelRow = page.locator(rowLocator);
-//            if (!modelRow.isVisible()) {
-//                System.out.println("Row not visible. Scrolling into view...");
-//                modelRow.scrollIntoViewIfNeeded(new Locator.ScrollIntoViewIfNeededOptions().setTimeout(60000));
-//            }
-//
-//            System.out.println("Waiting for row visibility...");
-//            modelRow.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE).setTimeout(60000));
-//            System.out.println("Row is visible. Clicking...");
-//
-//            modelRow.click();
-//            System.out.println("Successfully clicked the model: " + modelName);
-//        } catch (Exception e) {
-//            System.err.println("Error occurred while selecting the model: " + e.getMessage());
-//            page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("error_model_selection.png")));
-//            throw e;
-//        }
-    	
-    	Locator modelRow = page.getByText(prop.getProperty("modelName"));
-    	modelRow.click();
-    	Thread.sleep(10000);
+        try {
+            String modelName = prop.getProperty("modelName");
+            if (modelName == null || modelName.isEmpty()) {
+                throw new IllegalArgumentException("Model name not provided in properties.");
+            }
+
+            // Escape single quotes in modelName for XPath
+            String escapedModelName = modelName.replace("'", "\\'");
+
+            // Corrected and escaped XPath
+            String rowLocator = "//div[@data-column-id='1' and .//span[text()=\"" + escapedModelName + "\"]]";
+
+            System.out.println("Waiting for table to load...");
+            page.waitForSelector("//div[contains(@class, 'rdt_TableBody')]", 
+                new Page.WaitForSelectorOptions().setState(WaitForSelectorState.VISIBLE).setTimeout(120000));
+
+            Locator modelRow = page.locator(rowLocator);
+
+            if (!modelRow.isVisible()) {
+                System.out.println("Row not visible. Scrolling into view...");
+                modelRow.scrollIntoViewIfNeeded(new Locator.ScrollIntoViewIfNeededOptions().setTimeout(60000));
+            }
+
+            System.out.println("Waiting for row visibility...");
+            modelRow.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE).setTimeout(60000));
+            
+            modelRow.click();
+            System.out.println("Successfully clicked the model: " + modelName);
+        } catch (Exception e) {
+            System.err.println("Error occurred while selecting the model: " + e.getMessage());
+            page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("error_model_selection.png")));
+            throw e;
+        }
+        
+        page.click(yesBtn);
         return page;
     }
+
+
+
+
 
 
 

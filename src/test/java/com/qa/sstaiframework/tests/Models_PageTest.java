@@ -52,6 +52,6 @@ public class Models_PageTest extends BaseTest {
     @Test(priority = 4)
     public void selectModelTest() throws Exception {
         modelsPage.selectExistingModel();
-        Thread.sleep(15000);
+        
     }
 }
