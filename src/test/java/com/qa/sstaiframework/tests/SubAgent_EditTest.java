@@ -31,7 +31,8 @@ public class SubAgent_EditTest extends BaseTest {
     
     @Test(priority = 1)
     public void editSAAgentTest() throws InterruptedException {
-        agentsPage.selectCreatedAgent();
+//        agentsPage.selectCreatedAgent();
+        agentsPage.selectExistingAgent();
         System.out.println("Selected Edited Agent");
         agentsPage.selectSA();
         agentsPage.retryClickEditButton(3, 2000);

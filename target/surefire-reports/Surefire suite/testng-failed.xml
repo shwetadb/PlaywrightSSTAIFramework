@@ -3,14 +3,14 @@
 <suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="1" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="com.qa.sstaiframework.tests.Navigate_AgentTabsTest">
+      <class name="com.qa.sstaiframework.tests.Models_PageTest">
         <methods>
-          <include name="switchBtwnSubAgentTabs"/>
           <include name="tearDown"/>
           <include name="setUpAgentTest"/>
+          <include name="selectModelTest"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.qa.sstaiframework.tests.Navigate_AgentTabsTest -->
+      </class> <!-- com.qa.sstaiframework.tests.Models_PageTest -->
       <class name="com.qa.sstaiframework.tests.Login_ProcessTest">
         <methods>
           <include name="appLoginSetup"/>
@@ -20,6 +20,15 @@
           <include name="getchatHeadingTest"/>
         </methods>
       </class> <!-- com.qa.sstaiframework.tests.Login_ProcessTest -->
+      <class name="com.qa.sstaiframework.tests.Navigate_SubAgentTabsTest">
+        <methods>
+          <include name="switchBtwnTabsTest"/>
+          <include name="tearDown"/>
+          <include name="setUpAgentTest"/>
+          <include name="NextBtnSwitchTabsTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.sstaiframework.tests.Navigate_SubAgentTabsTest -->
       <class name="com.qa.sstaiframework.tests.SubAgent_CreateTest">
         <methods>
           <include name="testCreateAgent"/>
@@ -28,30 +37,14 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- com.qa.sstaiframework.tests.SubAgent_CreateTest -->
-      <class name="com.qa.sstaiframework.tests.SubAgent_EditTest">
+      <class name="com.qa.sstaiframework.tests.Navigate_AgentTabsTest">
         <methods>
-          <include name="editSAAgentTest"/>
+          <include name="switchBtwnSubAgentTabs"/>
           <include name="tearDown"/>
           <include name="setUpAgentTest"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.qa.sstaiframework.tests.SubAgent_EditTest -->
-      <class name="com.qa.sstaiframework.tests.Navigate_ModulesTest">
-        <methods>
-          <include name="modelsScreenNavigationTest"/>
-          <include name="createNewProjectTest"/>
-          <include name="containerServicesScreenNavigationTest"/>
-          <include name="tearDown"/>
-          <include name="policyScreenNavigationTest"/>
-          <include name="chatScreenNavigationTest"/>
-          <include name="costingScreenNavigationTest"/>
-          <include name="agentScreenNavigationTest"/>
-          <include name="logoutTest"/>
-          <include name="setUpModulesNavigation"/>
-          <include name="trainAgentsScreenNavigationTest"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.qa.sstaiframework.tests.Navigate_ModulesTest -->
+      </class> <!-- com.qa.sstaiframework.tests.Navigate_AgentTabsTest -->
       <class name="com.qa.sstaiframework.tests.Agent_EditTest">
         <methods>
           <include name="editAgentTest"/>
@@ -68,15 +61,14 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- com.qa.sstaiframework.tests.Agent_CreateTest -->
-      <class name="com.qa.sstaiframework.tests.SubAgent_ValidationTest">
+      <class name="com.qa.sstaiframework.tests.SubAgent_EditTest">
         <methods>
+          <include name="editSAAgentTest"/>
           <include name="tearDown"/>
-          <include name="checkProfileValidationTest"/>
           <include name="setUpAgentTest"/>
-          <include name="checkConfigValidationTest"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.qa.sstaiframework.tests.SubAgent_ValidationTest -->
+      </class> <!-- com.qa.sstaiframework.tests.SubAgent_EditTest -->
       <class name="com.qa.sstaiframework.tests.Agent_CheckAgentsTest">
         <methods>
           <include name="setUpAgentTest"/>
@@ -87,15 +79,23 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- com.qa.sstaiframework.tests.Agent_CheckAgentsTest -->
-      <class name="com.qa.sstaiframework.tests.Navigate_SubAgentTabsTest">
+      <class name="com.qa.sstaiframework.tests.SubAgent_ValidationTest">
         <methods>
-          <include name="switchBtwnTabsTest"/>
           <include name="tearDown"/>
+          <include name="checkProfileValidationTest"/>
           <include name="setUpAgentTest"/>
-          <include name="NextBtnSwitchTabsTest"/>
+          <include name="checkConfigValidationTest"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.qa.sstaiframework.tests.Navigate_SubAgentTabsTest -->
+      </class> <!-- com.qa.sstaiframework.tests.SubAgent_ValidationTest -->
+      <class name="com.qa.sstaiframework.tests.Navigate_ModulesTest">
+        <methods>
+          <include name="createNewProjectTest"/>
+          <include name="tearDown"/>
+          <include name="setUpModulesNavigation"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.sstaiframework.tests.Navigate_ModulesTest -->
       <class name="com.qa.sstaiframework.tests.Agent_ValidationTest">
         <methods>
           <include name="checkProfileValidationTest"/>

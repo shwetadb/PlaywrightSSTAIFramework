@@ -218,8 +218,8 @@ public class Agents_Page {
 	
 	// f) Create SubAgent heading
 		    public Page selectCreatedSubagent() throws InterruptedException {
-		    	page.selectOption(selectAgentDropdown, prop.getProperty("agentName"));
-		        System.out.println("Selected Agent : " + prop.getProperty("agentName") );
+		    	page.selectOption(selectAgentDropdown, prop.getProperty("existingAgentName"));
+		        System.out.println("Selected Agent : " + prop.getProperty("existingAgentName") );
 		        page.keyboard().press("Enter");
 		        Thread.sleep(5000);
 		        page.click(createdSubAgent);		    	

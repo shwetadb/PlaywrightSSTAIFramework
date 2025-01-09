@@ -19,6 +19,7 @@ public class Agent_CreateTest extends BaseTest {
         try {
             System.out.println("Logging in...");
             loginProcess.doLogin(prop.getProperty("username").trim(), prop.getProperty("password").trim());
+//            loginProcess.doLogin(getUsername(), getPassword());
             System.out.println("Login successful.");
 
             System.out.println("Initializing Modules Navigation.");

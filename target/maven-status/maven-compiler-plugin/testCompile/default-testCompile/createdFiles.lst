@@ -10,3 +10,4 @@ com\qa\sstaiframework\tests\Navigate_SubAgentTabsTest.class
 com\qa\sstaiframework\tests\Agent_ValidationTest.class
 com\qa\sstaiframework\tests\Navigate_AgentTabsTest.class
 com\qa\sstaiframework\tests\Agent_CheckAgentsTest.class
+com\qa\sstaiframework\tests\Models_PageTest.class

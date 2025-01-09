@@ -19,6 +19,9 @@ public class Models_Page {
     private String testBtn = "//button[normalize-space()='Test']";
     private String yesBtn = "//button[normalize-space()='Yes']";
     private String noBtn = "(//button[@class='swal2-cancel swal2-styled'])[1]";
+    private String createModelsScreenHeading = "(//h4[normalize-space()='Create New Model'])[1]";
+    private String modelsScreenHeading = "(//h4[normalize-space()='Models'])[1]";
+    private String editModelsScreenHeading = "(//h4[normalize-space()='Edit Model'])[1]";
 
     // Constructor
     public Models_Page(Page page, Properties prop) {
@@ -51,6 +54,11 @@ public class Models_Page {
             System.err.println("Error occurred while navigating to Create Model Screen: " + e.getMessage());
         }
     }
+    
+    public String isCreateModelScreenVisible() {
+     	 page.waitForSelector(createModelsScreenHeading, new Page.WaitForSelectorOptions().setTimeout(90000)); // Wait for visibility
+        return page.innerText(createModelsScreenHeading); 
+   }
 
     public void clickGoToModels() {
         try {
@@ -62,7 +70,10 @@ public class Models_Page {
         }
     }
 
-    
+    public String isModelsScreenVisible() {
+    	 page.waitForSelector(modelsScreenHeading, new Page.WaitForSelectorOptions().setTimeout(90000)); // Wait for visibility
+       return page.innerText(modelsScreenHeading); 
+  }
     
 
 
@@ -100,10 +111,17 @@ public class Models_Page {
             page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("error_model_selection.png")));
             throw e;
         }
-        
         page.click(yesBtn);
+        page.waitForLoadState();
+        Thread.sleep(10000);
         return page;
     }
+    
+    
+    public String isEditModelsScreenVisible() {
+   	 page.waitForSelector(editModelsScreenHeading, new Page.WaitForSelectorOptions().setTimeout(90000)); // Wait for visibility
+      return page.innerText(editModelsScreenHeading); 
+ }
 
 
 

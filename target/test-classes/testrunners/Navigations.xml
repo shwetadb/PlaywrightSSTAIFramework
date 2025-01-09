@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Debug Test Suite">
-    <test name="Modules Navigation Debug">
+
+<suite name="NavigationSuite">
+    <test name="NavigateModulesTest">
         <classes>
-            <class name="com.qa.sstaiframework.tests.Navigate_ModulesTest"/>
+            <class name="com.qa.sstaiframework.tests.Navigate_ModulesTest" />
         </classes>
     </test>
-    </suite>
+</suite>

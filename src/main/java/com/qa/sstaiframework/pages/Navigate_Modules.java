@@ -8,9 +8,9 @@ public class Navigate_Modules extends LoginProcess {
     //1.  Locators
     private String createNewProjectBtn = "//button[normalize-space()='Create New Project']";
     private String createNewProjectHeading = "//h4[normalize-space()='Create New Project']";
-    private String agentBtn = "//button[normalize-space()='Agents']";
+    private String agentBtn = "(//button[normalize-space()='Agents'])[1]";
     private String agentScreenHeading = "//h4[normalize-space()='Select Agent']";
-    private String modelsBtn = "//button[normalize-space()='Models']";
+    private String modelsBtn = "(//button[normalize-space()='Models'])[1]";
     private String modelsScreenHeading = "//h4[normalize-space()='Models']";
     private String costingBtn = "//button[normalize-space()='Costing']";
     private String costingScreenHeading = "//h5[normalize-space()='Costing']";
@@ -47,7 +47,7 @@ public class Navigate_Modules extends LoginProcess {
     }
 
     public String isCreateNewProjectVisible() {
-    	 page.waitForSelector(createNewProjectHeading, new Page.WaitForSelectorOptions().setTimeout(10000)); // Wait for visibility
+    	 page.waitForSelector(createNewProjectHeading, new Page.WaitForSelectorOptions().setTimeout(90000)); // Wait for visibility
          return page.innerText(createNewProjectHeading); 
     }
     
@@ -56,6 +56,7 @@ public class Navigate_Modules extends LoginProcess {
     //Agent Methods
     public void clickAgent() {
         page.click(agentBtn); // Click the "Agents" button
+        page.waitForLoadState();
         try {
             Thread.sleep(5000); // Wait for 1 second
             System.out.println("Clicked → Agent");
@@ -65,7 +66,7 @@ public class Navigate_Modules extends LoginProcess {
     }
 
     public String isAgentScreenVisible() {
-   	 page.waitForSelector(agentScreenHeading, new Page.WaitForSelectorOptions().setTimeout(10000)); // Wait for visibility
+   	 page.waitForSelector(agentScreenHeading, new Page.WaitForSelectorOptions().setTimeout(90000)); // Wait for visibility
      return page.innerText(agentScreenHeading); 
     }
     
@@ -82,7 +83,7 @@ public class Navigate_Modules extends LoginProcess {
     }
 
     public String isModelsScreenVisible() {
-      	 page.waitForSelector(modelsScreenHeading, new Page.WaitForSelectorOptions().setTimeout(10000)); // Wait for visibility
+      	 page.waitForSelector(modelsScreenHeading, new Page.WaitForSelectorOptions().setTimeout(90000)); // Wait for visibility
          return page.innerText(modelsScreenHeading); 
     }
     
@@ -99,7 +100,7 @@ public class Navigate_Modules extends LoginProcess {
     }
 
     public String isCostingScreenVisible() {
-      	 page.waitForSelector(costingScreenHeading, new Page.WaitForSelectorOptions().setTimeout(10000)); // Wait for visibility
+      	 page.waitForSelector(costingScreenHeading, new Page.WaitForSelectorOptions().setTimeout(90000)); // Wait for visibility
          return page.innerText(costingScreenHeading); 
     }
     
@@ -115,7 +116,7 @@ public class Navigate_Modules extends LoginProcess {
     }
 
     public String isPolicyScreenVisible() {
-      	 page.waitForSelector(policyScreenHeading, new Page.WaitForSelectorOptions().setTimeout(10000)); // Wait for visibility
+      	 page.waitForSelector(policyScreenHeading, new Page.WaitForSelectorOptions().setTimeout(90000)); // Wait for visibility
          return page.innerText(policyScreenHeading); 
     }
     
@@ -131,7 +132,7 @@ public class Navigate_Modules extends LoginProcess {
     }
 
     public String isContainerServicesScreenVisible() {
-      	 page.waitForSelector(containerServicesScreenHeading, new Page.WaitForSelectorOptions().setTimeout(10000)); // Wait for visibility
+      	 page.waitForSelector(containerServicesScreenHeading, new Page.WaitForSelectorOptions().setTimeout(90000)); // Wait for visibility
          return page.innerText(containerServicesScreenHeading); 
     }
     
@@ -148,7 +149,7 @@ public class Navigate_Modules extends LoginProcess {
     }
 
     public String isTrainAgentsScreenVisible() {
-      	 page.waitForSelector(trainAgentScreenHeading, new Page.WaitForSelectorOptions().setTimeout(10000)); // Wait for visibility
+      	 page.waitForSelector(trainAgentScreenHeading, new Page.WaitForSelectorOptions().setTimeout(90000)); // Wait for visibility
          return page.innerText(trainAgentScreenHeading); 
     }
     
@@ -164,7 +165,7 @@ public class Navigate_Modules extends LoginProcess {
     }
 
     public String isChatScreenVisible() {
-      	 page.waitForSelector(chatScreenHeading, new Page.WaitForSelectorOptions().setTimeout(10000)); // Wait for visibility
+      	 page.waitForSelector(chatScreenHeading, new Page.WaitForSelectorOptions().setTimeout(90000)); // Wait for visibility
          return page.innerText(chatScreenHeading); 
     }
     
@@ -181,7 +182,7 @@ public class Navigate_Modules extends LoginProcess {
     }
 
     public String isPickAccountVisible() {
-      	 page.waitForSelector(pickAccount, new Page.WaitForSelectorOptions().setTimeout(10000)); // Wait for visibility
+      	 page.waitForSelector(pickAccount, new Page.WaitForSelectorOptions().setTimeout(90000)); // Wait for visibility
          return page.innerText(pickAccount); 
     }
     

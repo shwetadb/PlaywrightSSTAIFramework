@@ -27,7 +27,8 @@ public class Navigate_AgentTabsTest extends BaseTest {
         modulesNavigation.clickAgent();
         
         // Select Agent
-        agentsPage.selectCreatedAgent();
+//        agentsPage.selectCreatedAgent();
+        agentsPage.selectExistingAgent();
         System.out.println("clicked create subagent");
         System.out.println("Setup completed for Navigate Between Agents Tabs.");
     }
