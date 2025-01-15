@@ -5,18 +5,25 @@ import java.util.Properties;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.TimeoutError;
 import com.microsoft.playwright.options.LoadState;
+import com.microsoft.playwright.options.SelectOption;
+import com.microsoft.playwright.options.WaitForSelectorState;
 
 public class SubAgent_Create {
 	private Page page;
-	private Properties prop;
+	public Properties prop;
 	
 	
 	
 	//1. Locators
 		    private String createSubAgentBtn = "//button[normalize-space()='Create Sub-Agent']";
 		    private String cloneSubAgentRadioBtn = "//input[@value='clone']";
-		    private String subAgentDropdown = "//select[@class='Agents_custom_select__CiLmN ']";
+		    private String subAgentDropdown = "(//select[@class='Agents_custom_select__CiLmN '])";
+		    private String cloneProfileNextBtn = "(//button[@type='button'][normalize-space()='Next'])[1]";
+		    private String cloneConfigNextBtn = "(//button[@type='button'][normalize-space()='Next'])[2]";
+		    private String cloneSubmitBtn = "(//button[normalize-space()='Submit'])[1]";
+		    private String cloneOKBtn = "(//button[normalize-space()='OK'])[1]";
 		    private String createNewSubAgentRadioBtn = "//input[@value='create']";
     //Profile Tab
 		    private String profileTab = "//button[@id='controlled-tab-tab-agentProfile']";
@@ -79,8 +86,9 @@ public class SubAgent_Create {
 	
     
     //2. Constructor
-    public SubAgent_Create(Page page) {
+    public SubAgent_Create(Page page, Properties prop) {
         this.page = page;
+        this.prop = prop;
             }
 
     // 3. Methods
@@ -254,8 +262,75 @@ public class SubAgent_Create {
 
 
     
+/*
+ * clone Sub Agent
+ *   
+ */
     
-    
-    
-    
+    public void cloneSubAgent() throws InterruptedException {
+        try {
+            // Fetch subAgentName from config.properties
+            String subAgentName = prop.getProperty("cloneSubAgentName").trim();
+
+            // Validate subAgentName
+            if (subAgentName == null || subAgentName.isEmpty()) {
+                throw new IllegalArgumentException("Sub-agent name is not specified in config.properties.");
+            }
+
+            // Click the "Clone Sub-Agent" radio button
+            page.click(cloneSubAgentRadioBtn);
+            System.out.println("Clicked clone radio button");
+
+            // Wait for the dropdown to become visible
+            Locator dropdown = page.locator(subAgentDropdown);
+            dropdown.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+            System.out.println("Dropdown is visible.");
+
+            // Fetch all options from the dropdown
+            List<String> optionsText = dropdown.locator("option").allTextContents();
+            System.out.println("Available dropdown options: " + optionsText);
+
+            // Check if the desired sub-agent exists
+            if (!optionsText.contains(subAgentName)) {
+                throw new IllegalArgumentException(
+                    "Sub-agent '" + subAgentName + "' not found in the dropdown. Available options: " + optionsText
+                );
+            }
+
+            // Select the desired sub-agent
+            dropdown.selectOption(new SelectOption().setLabel(subAgentName));
+            System.out.println("Successfully selected sub-agent: " + subAgentName);
+
+            // Navigate through the cloning process
+            page.click(cloneProfileNextBtn);
+            System.out.println("Clicked 'Next' on Profile step");
+
+            page.click(cloneConfigNextBtn);
+            System.out.println("Clicked 'Next' on Configuration step");
+
+            page.click(cloneSubmitBtn);
+            System.out.println("Clicked 'Submit' on Cloning step");
+
+            page.click(cloneOKBtn);
+            System.out.println("Cloned sub-agent successfully.");
+        } catch (TimeoutError e) {
+            System.err.println("Timeout occurred: " + e.getMessage());
+            throw e;
+        } catch (Exception e) {
+            System.err.println("Unexpected error: " + e.getMessage());
+            throw e;
+        }
+    }
+
+
+
+
+    	
+
+
+
 }
+    
+    
+    
+

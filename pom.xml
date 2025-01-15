@@ -14,22 +14,14 @@
 
   <dependencies>
     <!-- Playwright Dependency -->
+<!-- https://mvnrepository.com/artifact/com.microsoft.playwright/playwright -->
 <dependency>
     <groupId>com.microsoft.playwright</groupId>
     <artifactId>playwright</artifactId>
-    <version>1.42.0</version> <!-- Replace with the latest version -->
+    <version>1.49.0</version>
 </dependency>
 
 
-
-
-    <!-- JUnit Dependency -->
-<dependency>
-    <groupId>org.junit.jupiter</groupId>
-    <artifactId>junit-jupiter</artifactId>
-    <version>5.10.0</version>
-    <scope>test</scope>
-</dependency>
 
 
     <!-- TestNG Dependency -->
@@ -41,18 +33,23 @@
     </dependency>
 
     <!-- SLF4J API (Logging Facade) -->
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>1.7.32</version>
-    </dependency>
+<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>2.0.16</version>
+</dependency>
+
 
     <!-- Logback (SLF4J Implementation) -->
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <version>1.2.11</version>
-    </dependency>
+<!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
+<dependency>
+    <groupId>ch.qos.logback</groupId>
+    <artifactId>logback-classic</artifactId>
+    <version>1.5.16</version>
+    <scope>test</scope>
+</dependency>
+
 
   </dependencies>
 
@@ -62,7 +59,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
+    	<version>3.13.0</version>
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
@@ -73,7 +70,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.20</version>
+  		<version>3.5.2</version>
       </plugin>
     </plugins>
   </build>

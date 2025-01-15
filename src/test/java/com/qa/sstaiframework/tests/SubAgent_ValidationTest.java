@@ -30,7 +30,7 @@ public class SubAgent_ValidationTest extends BaseTest {
         // Initialize Create Agent
         agentsPage.selectExistingAgent();
         // Initialize CreateSubAgent
-        createSubAgent = new SubAgent_Create(page);
+        createSubAgent = new SubAgent_Create(page, prop);
         System.out.println("Setup completed for Creating Sub Agent");
     }
 

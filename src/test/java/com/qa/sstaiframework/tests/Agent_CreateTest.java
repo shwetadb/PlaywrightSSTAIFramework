@@ -68,6 +68,8 @@ public class Agent_CreateTest extends BaseTest {
         // Submit Knowledge Base
         createAgent.clickSubmitBtn();
         System.out.println("Agent creation submitted.");
+        
+        createAgent.clickOkBtn();
 
         // Verify Agent Creation
         Assert.assertTrue(createAgent.checkCreatedAgent(), "Agent creation failed. Agent not found in the dropdown.");

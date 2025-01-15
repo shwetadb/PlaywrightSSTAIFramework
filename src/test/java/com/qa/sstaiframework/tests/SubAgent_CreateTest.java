@@ -17,7 +17,7 @@ public class SubAgent_CreateTest extends BaseTest {
 
 
     @BeforeClass
-    public void setUpAgentTest() throws InterruptedException {
+    public void setUpSubAgentTest() throws InterruptedException {
         System.out.println("Starting setup for Check Agents Test...");
 
         // Perform login
@@ -30,7 +30,7 @@ public class SubAgent_CreateTest extends BaseTest {
         // Select Agent0.
         agentsPage.selectCreatedAgent();
         // Initialize CreateSubAgent
-        createSubAgent = new SubAgent_Create(page);
+        createSubAgent = new SubAgent_Create(page, prop);
         System.out.println("Setup completed for Creating Sub Agent");
     }
     
@@ -38,38 +38,46 @@ public class SubAgent_CreateTest extends BaseTest {
     
     
     
-    @Test(priority = 1, timeOut = 120000)
-    public void testCreateAgent() throws InterruptedException {
-        System.out.println("Starting agent creation process...");
-
-        // Create New Agent
-        createSubAgent.clickNewSubAgentBtn();
-        System.out.println("Sub Agent Create Btn clicked");
-        createSubAgent.enterProfileDetails(
-                prop.getProperty("subAgentName"),
-                prop.getProperty("subAgentPurpose"),
-                prop.getProperty("subAgentManagedIntents"),
-                prop.getProperty("subAgentPersonality"),
-                prop.getProperty("subAgentDescription"),
-                prop.getProperty("subAgentSpecializedActivities"),
-                prop.getProperty("subAgentPreInstruction"),
-                prop.getProperty("subAgentMainInstruction"),
-                prop.getProperty("subAgentPostInstruction"),
-                prop.getProperty("agentInstruction"));
-
-        System.out.println("Profile details entered successfully.");
-
-        // Configure Model
-        createSubAgent.selectConfig(prop.getProperty("modelName"));
-        
-        createSubAgent.clickConfigNextBtn();
-        System.out.println("Configuration completed.");
-
-        // Submit Knowledge Base
-        createSubAgent.clickSubmitBtn();
-        System.out.println("Sub Agent creation submitted.");
-    }
+//    @Test(priority = 1, timeOut = 120000)
+//    public void testCreateSubAgent() throws InterruptedException {
+//        System.out.println("Starting agent creation process...");
+//
+//        // Create New Agent
+//        createSubAgent.clickNewSubAgentBtn();
+//        System.out.println("Sub Agent Create Btn clicked");
+//        createSubAgent.enterProfileDetails(
+//                prop.getProperty("subAgentName"),
+//                prop.getProperty("subAgentPurpose"),
+//                prop.getProperty("subAgentManagedIntents"),
+//                prop.getProperty("subAgentPersonality"),
+//                prop.getProperty("subAgentDescription"),
+//                prop.getProperty("subAgentSpecializedActivities"),
+//                prop.getProperty("subAgentPreInstruction"),
+//                prop.getProperty("subAgentMainInstruction"),
+//                prop.getProperty("subAgentPostInstruction"),
+//                prop.getProperty("agentInstruction"));
+//
+//        System.out.println("Profile details entered successfully.");
+//
+//        // Configure Model
+//        createSubAgent.selectConfig(prop.getProperty("modelName"));
+//        
+//        createSubAgent.clickConfigNextBtn();
+//        System.out.println("Configuration completed.");
+//
+//        // Submit Knowledge Base
+//        createSubAgent.clickSubmitBtn();
+//        System.out.println("Sub Agent creation submitted.");
+//    }
     
+    
+    @Test(priority = 2, timeOut = 120000)
+    public void cloneSubAgentTest() throws InterruptedException {
+        createSubAgent.clickNewSubAgentBtn();
+        Thread.sleep(10000);
+        createSubAgent.cloneSubAgent();
+    }
+
     
     
     

@@ -9,10 +9,565 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">73,789</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">119,671</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.qa.sstaiframework.tests.Models_EditTest</td><td><a href="#m0">editModelTest</a></td><td rowspan="1">1736417018853</td><td rowspan="1">14552</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.qa.sstaiframework.tests.Agent_CreateTest</td><td><a href="#m0">testCreateAgent</a></td><td rowspan="1">1736764767252</td><td rowspan="1">59364</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.qa.sstaiframework.tests.Models_EditTest#editModelTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">com.qa.sstaiframework.tests.Agent_CreateTest#testCreateAgent</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\progress.js:78:26)
+    at Frame.selectOption (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\frames.js:1159:23)
+    at FrameDispatcher.selectOption (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\dispatchers\frameDispatcher.js:242:33)
+    at FrameDispatcher._handleCommand (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\dispatchers\dispatcher.js:365:39)
+}
+Call log:
+- waiting for locator(&quot;select[name=&apos;modelName&apos;]&quot;)
+-   locator resolved to &lt;select name=&quot;modelName&quot; class=&quot;NewAgentDetail_inputStyl…&gt;…&lt;/select&gt;
+- attempting select option action
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #1
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #2
+-   waiting 20ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #3
+-   waiting 100ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #4
+-   waiting 100ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #5
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #6
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #7
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #8
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #9
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #10
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #11
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #12
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #13
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #14
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #15
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #16
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #17
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #18
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #19
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #20
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #21
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #22
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #23
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #24
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #25
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #26
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #27
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #28
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #29
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #30
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #31
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #32
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #33
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #34
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #35
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #36
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #37
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #38
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #39
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #40
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #41
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #42
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #43
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #44
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #45
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #46
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #47
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #48
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #49
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #50
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #51
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #52
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #53
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #54
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #55
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #56
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #57
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #58
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #59
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #60
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #61
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #62
+-   waiting 500ms
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:722)
+	at com.microsoft.playwright.impl.FrameImpl.selectOptionImpl(FrameImpl.java:701)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$selectOption$2(FrameImpl.java:113)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:113)
+	at com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:102)
+	at com.microsoft.playwright.impl.LocatorImpl.selectOption(LocatorImpl.java:478)
+	at com.microsoft.playwright.Locator.selectOption(Locator.java:4300)
+	at com.qa.sstaiframework.pages.Agent_Create.selectConfig(Agent_Create.java:241)
+	at com.qa.sstaiframework.tests.Agent_CreateTest.testCreateAgent(Agent_CreateTest.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:47)
+	at org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:76)
+	at org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:11)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\progress.js:78:26)
+    at Frame.selectOption (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\frames.js:1159:23)
+    at FrameDispatcher.selectOption (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\dispatchers\frameDispatcher.js:242:33)
+    at FrameDispatcher._handleCommand (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\dispatchers\dispatcher.js:365:39)
+}
+Call log:
+- waiting for locator(&quot;select[name=&apos;modelName&apos;]&quot;)
+-   locator resolved to &lt;select name=&quot;modelName&quot; class=&quot;NewAgentDetail_inputStyl…&gt;…&lt;/select&gt;
+- attempting select option action
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #1
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #2
+-   waiting 20ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #3
+-   waiting 100ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #4
+-   waiting 100ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #5
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #6
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #7
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #8
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #9
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #10
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #11
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #12
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #13
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #14
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #15
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #16
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #17
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #18
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #19
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #20
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #21
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #22
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #23
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #24
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #25
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #26
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #27
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #28
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #29
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #30
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #31
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #32
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #33
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #34
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #35
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #36
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #37
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #38
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #39
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #40
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #41
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #42
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #43
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #44
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #45
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #46
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #47
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #48
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #49
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #50
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #51
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #52
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #53
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #54
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #55
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #56
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #57
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #58
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #59
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #60
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #61
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #62
+-   waiting 500ms
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 25 more
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

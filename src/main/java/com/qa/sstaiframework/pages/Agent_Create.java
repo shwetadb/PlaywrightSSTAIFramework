@@ -72,6 +72,8 @@ public class Agent_Create extends LoginProcess{
 		private String knwBaseBackBtn = "//*[@id=\"controlled-tab-tabpane-agentKnowledge\"]/div/div/div[2]/button[1]";		
 	//Agent Screen
 		private String selectAgentDropdown = "//select[contains(@class,'form-select form-select-m')]";
+	    public String OKBtn = "(//button[normalize-space()='OK'])[1]";
+
 		
 		
 	
@@ -282,6 +284,12 @@ public class Agent_Create extends LoginProcess{
     		}
     		return false;
 	    	
+	    }
+	    
+	    
+	    public void clickOkBtn() {
+	    	page.click(OKBtn);
+	    	System.out.println("clicked Ok");
 	    }
     
 

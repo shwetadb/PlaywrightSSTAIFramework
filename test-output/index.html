@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\kaver\AppData\Local\Temp\testng-eclipse-934831159\testng-customsuite.xml</span>
+                    <span>C:\Users\kaver\AppData\Local\Temp\testng-eclipse-710762624\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.qa.sstaiframework.tests.Models_EditTest" class="method navigator-link" hash-for-method="editModelTest">editModelTest</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.qa.sstaiframework.tests.Agent_CreateTest" class="method navigator-link" hash-for-method="testCreateAgent">testCreateAgent</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,25 +118,582 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.qa.sstaiframework.tests.Models_EditTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.qa.sstaiframework.tests.Agent_CreateTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="editModelTest">
-                  </a> <!-- editModelTest -->
-                  <span class="method-name">editModelTest</span>
+                  <a name="testCreateAgent">
+                  </a> <!-- testCreateAgent -->
+                  <span class="method-name">testCreateAgent</span>
+                  <div class="stack-trace">com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\progress.js:78:26)
+    at Frame.selectOption (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\frames.js:1159:23)
+    at FrameDispatcher.selectOption (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\dispatchers\frameDispatcher.js:242:33)
+    at FrameDispatcher._handleCommand (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\dispatchers\dispatcher.js:365:39)
+}
+Call log:
+- waiting for locator(&quot;select[name=&apos;modelName&apos;]&quot;)
+-   locator resolved to &lt;select name=&quot;modelName&quot; class=&quot;NewAgentDetail_inputStyl…&gt;…&lt;/select&gt;
+- attempting select option action
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #1
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #2
+-   waiting 20ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #3
+-   waiting 100ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #4
+-   waiting 100ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #5
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #6
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #7
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #8
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #9
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #10
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #11
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #12
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #13
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #14
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #15
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #16
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #17
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #18
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #19
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #20
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #21
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #22
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #23
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #24
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #25
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #26
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #27
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #28
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #29
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #30
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #31
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #32
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #33
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #34
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #35
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #36
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #37
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #38
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #39
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #40
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #41
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #42
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #43
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #44
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #45
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #46
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #47
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #48
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #49
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #50
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #51
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #52
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #53
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #54
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #55
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #56
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #57
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #58
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #59
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #60
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #61
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #62
+-   waiting 500ms
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:722)
+	at com.microsoft.playwright.impl.FrameImpl.selectOptionImpl(FrameImpl.java:701)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$selectOption$2(FrameImpl.java:113)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:113)
+	at com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:102)
+	at com.microsoft.playwright.impl.LocatorImpl.selectOption(LocatorImpl.java:478)
+	at com.microsoft.playwright.Locator.selectOption(Locator.java:4300)
+	at com.qa.sstaiframework.pages.Agent_Create.selectConfig(Agent_Create.java:241)
+	at com.qa.sstaiframework.tests.Agent_CreateTest.testCreateAgent(Agent_CreateTest.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:47)
+	at org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:76)
+	at org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:11)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\progress.js:78:26)
+    at Frame.selectOption (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\frames.js:1159:23)
+    at FrameDispatcher.selectOption (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\dispatchers\frameDispatcher.js:242:33)
+    at FrameDispatcher._handleCommand (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\kaver\AppData\Local\Temp\playwright-java-4533936310448268742\package\lib\server\dispatchers\dispatcher.js:365:39)
+}
+Call log:
+- waiting for locator(&quot;select[name=&apos;modelName&apos;]&quot;)
+-   locator resolved to &lt;select name=&quot;modelName&quot; class=&quot;NewAgentDetail_inputStyl…&gt;…&lt;/select&gt;
+- attempting select option action
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #1
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #2
+-   waiting 20ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #3
+-   waiting 100ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #4
+-   waiting 100ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #5
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #6
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #7
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #8
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #9
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #10
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #11
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #12
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #13
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #14
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #15
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #16
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #17
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #18
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #19
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #20
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #21
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #22
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #23
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #24
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #25
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #26
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #27
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #28
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #29
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #30
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #31
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #32
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #33
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #34
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #35
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #36
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #37
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #38
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #39
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #40
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #41
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #42
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #43
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #44
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #45
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #46
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #47
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #48
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #49
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #50
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #51
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #52
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #53
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #54
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #55
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #56
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #57
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #58
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #59
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #60
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #61
+-   waiting 500ms
+-   waiting for element to be visible and enabled
+-   element is not visible
+- retrying select option action, attempt #62
+-   waiting 500ms
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 25 more
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\kaver\AppData\Local\Temp\testng-eclipse-934831159\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\kaver\AppData\Local\Temp\testng-eclipse-710762624\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,7 +702,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.qa.sstaiframework.tests.Models_EditTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.sstaiframework.tests.Agent_CreateTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -187,14 +744,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'editModelTest')
-data.setCell(0, 2, 'com.qa.sstaiframework.tests.Models_EditTest')
-data.setCell(0, 3, 14552);
+data.setCell(0, 1, 'testCreateAgent')
+data.setCell(0, 2, 'com.qa.sstaiframework.tests.Agent_CreateTest')
+data.setCell(0, 3, 59364);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 59 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -220,22 +777,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.qa.sstaiframework.tests.Models_EditTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.qa.sstaiframework.tests.Agent_CreateTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
-                <span class="method-name">setUpAgentTest</span>
-                <span class="method-start">10826 ms</span>
+                <span class="method-name">setUpAgentCreation</span>
+                <span class="method-start">20035 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">editModelTest</span>
-                <span class="method-start">55337 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testCreateAgent</span>
+                <span class="method-start">53240 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">69903 ms</span>
+                <span class="method-start">112620 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

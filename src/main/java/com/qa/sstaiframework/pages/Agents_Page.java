@@ -154,6 +154,7 @@ public class Agents_Page {
 		    	page.selectOption(selectAgentDropdown, prop.getProperty("agentName"));
 		        System.out.println("Selected Agent : " + prop.getProperty("agentName") );
 		        page.keyboard().press("Enter");
+		        page.waitForLoadState(LoadState.NETWORKIDLE);
 		        Thread.sleep(5000);
 		        
 		    }
